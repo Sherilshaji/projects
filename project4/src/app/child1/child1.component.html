@@ -1,0 +1,21 @@
+
+<button (click)="addNewEmp()">Add new employee</button><br><br>
+
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Gender</th>
+            <th>Address</th>
+        </tr>
+        <tr *ngFor="let x of empDatas">
+            <td>{{x.employeName}}</td>
+            <td>{{x.department}}</td>
+            <td>{{x.salary}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.address}}</td>
+        </tr>
+    </table>
+</div>

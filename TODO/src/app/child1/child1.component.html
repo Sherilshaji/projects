@@ -1,0 +1,18 @@
+<body>
+<div class="content">
+    <h1>Login</h1>
+    <div class="table">
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" [(ngModel)]="newUser.name" placeholder="Enter your name"/></td>
+        </tr>
+        <tr>
+        <th>Password</th>
+        <td><input type="password" [(ngModel)]="newUser.password" placeholder="*********"/></td>
+        </tr>
+    </table></div>
+    <button (click)="login()">Login</button>
+    <button routerLink="/register">New User</button>
+</div>
+</body>
