@@ -1,0 +1,8 @@
+<h2>Student Registration</h2>
+Username:<input type="text" [(ngModel)]="student.userName" /><br><br>
+Email:<input type="text" [(ngModel)]="student.email" /><br><br>
+Phone:<input type="number" [(ngModel)]="student.phone" /><br><br>
+Password:<input type="password" [(ngModel)]="student.password" /><br><br>
+Confirm Password:<input type="password" [(ngModel)]="confirmPass" /><br><Br>
+<button (click)="regStudent()">Register</button>
+<button routerLink="/login">Back</button>

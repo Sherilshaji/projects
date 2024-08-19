@@ -1,0 +1,18 @@
+.mat-checkbox{
+    color: black;
+}
+.mat-accent.mat-mdc-checkbox {
+    --mdc-checkbox-selected-pressed-icon-color: #ffb787;
+    --mdc-checkbox-selected-checkmark-color: #502400;
+    --mdc-checkbox-selected-focus-icon-color: #ffb787;
+    --mdc-checkbox-selected-hover-icon-color: #ffb787;
+    --mdc-checkbox-selected-icon-color: #ffb787;
+    --mdc-checkbox-selected-focus-state-layer-color: #ffb787;
+    --mdc-checkbox-selected-hover-state-layer-color: #ffb787;
+    --mdc-checkbox-unselected-pressed-state-layer-color: #ffb787;
+    --mat-checkbox-disabled-label-color: rgb(0 0 0);
+    --mat-checkbox-label-text-color: #000000;
+}
+html{
+    --mdc-filled-text-field-label-text-color: #ffb4ab;
+}
