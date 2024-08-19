@@ -1,0 +1,103 @@
+body{
+    background-image:url("C:/MEAN STACK/Programs/img/bgmain2.jpg");
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+.myself{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display:block;
+    padding-top: 25vh;
+    font-size: 20px;
+}
+.contents{
+    align-items: end;
+    justify-content: end;
+    display: flex;
+    padding:15px;
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-top:-190px;
+    font-size: 20px;
+    padding-right: 50px;
+}
+.projectbtn{
+    border-radius: 10px;
+    cursor:pointer;
+    font-size: 15px;
+    padding: 5px;
+    font-family:'Courier New', Courier, monospace;
+}
+.projectbtn:hover{
+    opacity: 0.7;
+}
+.home{
+    cursor:pointer;
+    width:58px;
+}
+.home:hover{
+    color:rgb(25, 113, 156);
+}
+.aboutme{
+    cursor: pointer;
+    width:105px;
+    margin-left: 25px;
+}
+.aboutme:hover{
+    color:rgb(25, 113, 156);
+}
+.contacts{
+    cursor: pointer;
+    width:102px;
+    margin-left: 25px;
+    margin-right: 20px;
+}
+.contacts:hover{
+    color:rgb(25, 113, 156);
+}
+.projects{
+    cursor: pointer;
+    width:95px;
+    margin-left: 25px;
+}
+.projects:hover{
+    color:rgb(25, 113, 156);
+}
+.icons{
+    width:10px;
+    display:list-item;
+    padding-top:20px;
+    padding-left:15px;
+}   
+.img1{
+    background-image: url("C:/MEAN STACK/Programs/img/linkedin.jpg");
+    display:flex;
+    background-size: 30px;
+}
+.img2{
+    background-image: url("C:/MEAN STACK/Programs/img/communication.png");
+    background-size: 30px;
+    display: flex;
+}
+.img3{
+    background-image: url("C:/MEAN STACK/Programs/img/twitter.png");
+    background-size: 30px;
+    display: flex;
+}
+.img4{
+    background-image: url("C:/MEAN STACK/Programs/img/instagram.png");
+    background-size: 30px;
+    display: flex;
+}
+.pages{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    width:80%;
+    align-items: center;
+    display:contents;
+}
