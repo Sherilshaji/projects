@@ -1,0 +1,23 @@
+<body>
+<div class="content">
+<h1>Registration</h1>
+<div class="table">
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" [(ngModel)]="newUser.name" placeholder="Enter your name"/></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td><input type="password" [(ngModel)]="newUser.password" placeholder="*********"/></td>
+        </tr>
+        <tr>
+            <th>Confirm Password</th>
+            <td><input type="password" [(ngModel)]="password" placeholder="*********"/></td>
+        </tr>
+    </table>
+</div>
+<button (click)="regUser()">Register</button>
+<button routerLink="/login">Already Registered</button>
+</div>
+</body>

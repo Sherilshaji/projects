@@ -1,0 +1,22 @@
+<button (click)="toggleButton()">{{toggle}}</button><br><br>
+<label>Employee name:</label>
+<select (change)="onChange($event)">
+  <option *ngFor="let name of empName" [value]="name">{{name}}</option>
+</select>
+<button (click)="get()">Get</button>
+<app-child1 *ngIf="show" (countValue)="count($event)" [empDatas]="empData"></app-child1>
+<div *ngIf="countValue==1"><br><br>
+  <label>Employee name:</label>
+<input type="text" [(ngModel)]="employeName"/><br><br>
+  <label>Department:</label>
+  <input type="text" [(ngModel)]="department"/><br><br>
+  <label>Salary:</label>
+  <input type="number" [(ngModel)]="salary"/><br><br>
+  <label>Gender:</label>
+  <div *ngFor="let option of options">
+  <input type="radio" [value]="option" (change)="OnSelectionChange(option)" [(ngModel)]="gender"/>
+  {{option}}</div><br>
+  <label>Address:</label>
+  <input type="text" [(ngModel)]="address"/><br><br>
+  <button (click)="add()">Add</button><br><br>
+</div>
