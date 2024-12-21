@@ -1,0 +1,14 @@
+
+  <!-- dashboard.component.html -->
+
+<!-- This is where ProfileComponent will be loaded when the route changes -->
+<router-outlet></router-outlet>
+
+    
+<app-add-expense (expenseAdded)="expensesList.fetchExpenses()"></app-add-expense>
+<br><br>
+
+<app-expenses-list #expensesList></app-expenses-list>
+
+    <button (click)="logout()" class="btn-submit">Logout</button><br>
+    
