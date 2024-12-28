@@ -1,0 +1,220 @@
+/* Form container styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* Label and input styling */
+form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Dropdown styling */
+.custom-dropdown {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-toggle:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-list button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.dropdown-list button:hover {
+  color: #c0392b;
+}
+
+/* Add new category button */
+form button[type="button"] {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button[type="button"]:hover {
+  background: #4c5054;
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+form button[type="submit"]:hover {
+  background: #000000;
+}
+
+/* File input and hint styling */
+input#csvFile {
+  margin: 10px 0;
+  padding: 8px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+a {
+  color: #3498db;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div[aria-hidden="false"] {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+/* Hide the default input file style */
+#csvFile {
+  display: none;
+}
+
+/* Custom label for the file input */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect for the label */
+.custom-file-upload:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add focus effect */
+.custom-file-upload:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+/* Style for file input container */
+.file-upload-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  .dropdown-toggle {
+    font-size: 0.9rem;
+  }
+
+  form button[type="submit"],
+  form button[type="button"] {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}

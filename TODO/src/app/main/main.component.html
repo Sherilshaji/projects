@@ -1,0 +1,155 @@
+<body>
+    <div >
+        <mat-icon routerLink='/dashboard'><img class="iconDashboard" alt="" width="40px" height="40px"></mat-icon>
+    </div>
+
+    <div class="container">
+        <div class="input-container-wrapper">
+        <input class="input-container" type="text" [(ngModel)]="newtask.taskName" placeholder="Enter Task"/><br><br>
+        </div>
+        <mat-form-field appearance="fill" class="calender">
+            <mat-label>Due date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="newtask.dueDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br><br>
+        <button (click)="add()">Submit</button>
+    </div>
+<div class="tab">
+   <div >
+    <mat-form-field class="filter" appearence="fill">
+        <mat-label>Filter</mat-label>
+        <mat-select>
+            <mat-option (click)="findPendingTasksofToday()">Today's Task</mat-option>
+            <mat-option (click)="findPendingTasksoftheWeek()">Pending Tasks of the Week</mat-option>
+            <mat-option (click)="findPendingTasksoftheMonth()">Pending Tasks of the Month</mat-option>
+        </mat-select>
+    </mat-form-field>
+   </div>
+   <div class="taskName">
+   <div *ngIf="div==0">
+    <table>
+        <div>
+            <tr>
+                <th>Task</th>
+            </tr>
+            <tr *ngFor="let i of pendingTasksofToday">
+                <td>{{i.taskName}}</td>
+            </tr>
+        </div>
+    </table>
+    </div>
+
+    <div *ngIf="div==1">
+        <table>
+            <div>
+                <tr>
+                    <th>Task Name</th>
+                </tr>
+                <tr *ngFor="let i of pendingTasksofWeek">
+                    <td>{{i.taskName}}</td>
+                </tr>
+            </div>
+        </table>
+    </div>
+
+    <div *ngIf="div==2">
+        <table>
+            <div>
+                <tr>
+                    <th>Task Name</th>
+                </tr>
+                <tr *ngFor="let i of pendingTasksofMonth">
+                    <td>{{i.taskName}}</td>
+                </tr>
+            </div>
+        </table>
+    </div>
+    </div>
+</div>
+    <div class="table">
+        <h4>Tasks</h4>
+        <div class="button" >
+            <button class="btn" (click)="pending()">Pending</button><br>
+            <button class="btn" (click)="completed()">Completed</button><br>
+            <button class="btn" (click)="task()">All</button><br>
+        </div>
+        <div *ngIf="page==0">
+        <table>
+            <tr>
+                <th>Task Name</th>
+                <th>Creation Date</th>
+                <th>Due Date</th>
+                <th>Last Updated</th>
+                <th>Status</th>
+                <th>Actions</th>
+                <th>Toggle</th>
+            </tr>
+            <tr class="list" *ngFor="let i of tasks">
+                <td>{{i.taskName}}</td>
+                <td>{{i.creationDate | date:'mediumDate'}}</td>
+                <td>{{i.dueDate | date:'mediumDate'}}</td>
+                <td>{{i.lastUpdateDate | date:'mediumDate'}}</td>
+                <td>{{i.status}}</td>
+                <td><button (click)="edit(i)">Edit</button><button (click)="remove(i.id)">Remove</button>
+                    <button (click)="clone(i.id)">Clone</button></td>
+                <td><mat-slide-toggle (change)="toggle(i)" [checked]="i.toggleState" ></mat-slide-toggle></td>
+            </tr>
+        </table>
+        </div>
+    
+
+    <div *ngIf="page==2">
+        <table>
+            <div>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Creation Date</th>
+                    <th>Due Date</th>
+                    <th>Last Updated</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                    <th>Toggle</th>
+                </tr>
+                <tr class="list" *ngFor="let i of tasksPending">
+                    <td>{{i.taskName}}</td>
+                    <td>{{i.creationDate | date:'mediumDate'}}</td>
+                    <td>{{i.dueDate | date:'mediumDate'}}</td>
+                    <td>{{i.lastUpdateDate | date:'mediumDate'}}</td>
+                    <td>{{i.status}}</td>
+                    <td><button (click)="edit(i)">Edit</button><button (click)="remove(i.id)">Remove</button>
+                        <button (click)="clone(i.id)">Clone</button></td>
+                    <td><mat-slide-toggle (change)="toggle(i)" [checked]="i.toggleState" ></mat-slide-toggle></td>    
+                </tr>
+            </div>
+        </table>
+    </div>
+
+    <div *ngIf="page==1">
+        <table>
+            <div>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Creation Date</th>
+                    <th>Due Date</th>
+                    <th>Last Updated</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                    <th>Toggle</th>
+                </tr>
+                <tr class="list" *ngFor="let i of tasksCompleted">
+                    <td>{{i.taskName}}</td>
+                    <td>{{i.creationDate | date:'mediumDate'}}</td>
+                    <td>{{i.dueDate | date:'mediumDate'}}</td>
+                    <td>{{i.lastUpdateDate | date:'mediumDate'}}</td>
+                    <td>{{i.status}}</td>
+                    <td><button (click)="edit(i)">Edit</button><button (click)="remove(i.id)">Remove</button>
+                        <button (click)="clone(i.id)">Clone</button></td>
+                    <td><mat-slide-toggle (change)="toggle(i)" [checked]="i.toggleState" ></mat-slide-toggle></td>    
+                </tr>
+            </div>
+        </table>
+    </div>
+</div>
+</body>

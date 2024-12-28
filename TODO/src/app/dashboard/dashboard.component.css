@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding: 0;
+    background-image: url("C:/MEAN STACK/Programs/img/wp4546427-blue-white-wallpapers.jpg");
+    background-size: cover;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #1c245e;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .dashboard-container {
+    display: block;
+    padding-top: 20px;
+  }
+  .task-info{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.215);
+    display: block;
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    position:relative;
+    margin:20px;
+    text-align: center;
+  }
+  button {
+    background-color: #114985;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin:20px auto;
+    display:block;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .tabs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  canvas {
+    width:fit-content;
+    position:relative;
+  }
+  table th{
+    padding-bottom: 10px;
+  }
+  table{
+    font-size: 16px;
+    font-weight: bold;
+    color: #0f355e;
+  }
